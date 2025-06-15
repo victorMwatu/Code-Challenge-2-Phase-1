@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 2px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+#title-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex; /* Activates Flexbox */
+    gap: 20px; /* Adds space between list and section */
+}
+
+.listContainer {
+    flex: 1; /* Takes up available space */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.regContainer {
+    flex: 1; /* Takes up equal space */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: rgb(230, 225, 225);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px rgba(26, 25, 25, 0.1);
+}

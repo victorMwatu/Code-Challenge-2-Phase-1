@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest List</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div id = "title">
+            <p>THE GUEST LIST</p>
+        </div>
+    </header>
+    <!-- registration form -->
+    <div class="container">
+    <section id = "registration">
+        <p>Register here:</p>
+        <form id="eventRegistration">
+            <!-- name textbox -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <br>
+            <!-- category of guest selection drop down -->
+             <label for="category">Category:</label>
+             <select id="category" name="category" required>
+                <option value="">--Select Category--</option>
+                <option value="family">Family</option>
+                <option value="friend">Friend</option>
+                <option value="colleague">Colleague</option>
+             </select>
+             <br>
+             <br>
+             <!-- rsvp toggle -->
+              <label for="rsvp">RSVP:</label>
+              <select id="rsvp" name="rsvp" required>
+                <option value="">--Toggle Attendance--</option>
+                <option value="attending">Attending</option>
+                <option value="notAttending">Not Attending</option>
+              </select>
+              <br>
+              <br>
+              <!-- submit button -->
+               <button type="submit">Submit</button>
+              <br>
+              <br>
+        </form>
+    </section>
+    <!-- the guest list displayed upon registration -->
+    <section class="listContainer">
+        <h3>List of Booked Guests</h3>
+        <ol id = 'list'>
+            <li></li>
+        </ol>
+    </section>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+</html>
