@@ -72,11 +72,7 @@ document.getElementById("eventRegistration").addEventListener("submit", function
         });
         
         input.addEventListener('blur', saveName);
-        // const newName = prompt('Enter new name:', currentName);
-  
-        // if (newName !== null && newName.trim() !== '') {
-        //     nameItem.textContent = newName.trim();
-        // }
+
             }));
 });
 
