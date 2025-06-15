@@ -52,6 +52,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 20%;
+    height: fit-content;
     background-color: rgb(230, 225, 225);
     margin-bottom: 10px;
     border-radius: 3px;
