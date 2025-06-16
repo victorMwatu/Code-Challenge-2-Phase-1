@@ -58,3 +58,15 @@ header {
     border-radius: 3px;
     box-shadow: 0 5px 5px rgba(26, 25, 25, 0.1);
 }
+li.fam{
+    background-color: aqua;
+}
+li.fre{
+    background-color: chartreuse;
+}
+li.coll{
+    background-color: deeppink;
+}
+li {
+  margin-bottom: 10px;
+}

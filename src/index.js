@@ -27,6 +27,14 @@ document.getElementById("eventRegistration").addEventListener("submit", function
     }else {
         alert('The list is full.');
     }
+    //add color based on category
+    if (category === 'friend'){
+            newGuest.classList.add('fre');
+    }else if (category === 'family'){
+                newGuest.classList.add('fam');
+    }else if (category === 'colleague'){
+            newGuest.classList.add('coll');      
+    }
 
     //handle delete buttons events
     document.querySelectorAll('.deleteButton').forEach( button => button.addEventListener('click', function(){
@@ -62,6 +70,15 @@ document.getElementById("eventRegistration").addEventListener("submit", function
             nameItem.appendChild(editButton);
             nameItem.appendChild(deleteButton);
             }
+
+        //     if (category.value === 'friend'){
+        //     nameItem.classList.add('fre');
+        // }else if (category.value === 'family'){
+        //         nameItem.classList.add('fam');
+        // }else if (category.value === 'colleague'){
+        //     nameItem.classList.add('coll');
+            
+        // }
         }
         
         // Save on Enter key or blur
@@ -74,5 +91,14 @@ document.getElementById("eventRegistration").addEventListener("submit", function
         input.addEventListener('blur', saveName);
 
             }));
+        if (category.value === 'friend'){
+            newGuest.classList.add('fre');
+        }else if (category.value === 'family'){
+                newGuest.classList.add('fam');
+        }else if (category.value === 'colleague'){
+            newGuest.classList.add('coll');
+            
+        }
+        this.reset();
 });
 
