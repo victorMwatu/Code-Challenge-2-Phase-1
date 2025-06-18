@@ -30,7 +30,21 @@ event-guest-list-manager/
 ✅ **Real-time Updates** - List updates immediately when new guests are added, edited, or deleted
 ✅ **Form Validation** - Prevents empty submissions  
 ✅ **Responsive Design** - Works on both desktop and mobile devices  
-✅ **Clean UI** - User-friendly interface with proper styling  
+✅ **Clean UI** - User-friendly interface with proper styling 
+
+## Challenges Overcome
+
+- **Mobile Responsiveness**: Initially had layout issues on phones, fixed by adjusting container widths and using flexible units
+- **Form Validation**: Implemented proper validation to prevent empty submissions and implement required fields
+- **DOM Manipulation**: Ensured clean, efficient updates to the guest list display
+
+## What I Learned
+
+- How to effectively manipulate the DOM with  JavaScript
+- Form handling and default event prevention techniques
+- Creating responsive designs that work across devices
+- The importance of user experience in web applications
+- Debugging JavaScript in the browser console
 
 <br>
 <br>
