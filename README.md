@@ -27,7 +27,7 @@ event-guest-list-manager/
 
 ✅ **Guest Registration Form** - Users can input guest details  
 ✅ **Dynamic Guest List Display** - Shows, edits, and deletes all registered guests without page refresh  
-✅ **Real-time Updates** - List updates immediately when new guests are added, edited, or deleted
+✅ **Real-time Updates** - List updates immediately when new guests are added, edited, or deleted  
 ✅ **Form Validation** - Prevents empty submissions  
 ✅ **Responsive Design** - Works on both desktop and mobile devices  
 ✅ **Clean UI** - User-friendly interface with proper styling 
