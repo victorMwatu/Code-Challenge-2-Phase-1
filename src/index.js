@@ -20,18 +20,18 @@ document.getElementById("eventRegistration").addEventListener("submit", function
     deleteButton.classList.add('deleteButton');
     editButton.innerText = 'Edit Name';
     editButton.classList.add('editButton');
-    toggleAttendance.innerText = "Click To Toggle Attendance";
+    toggleAttendance.innerText = "Change Attendance";
     toggleAttendance.addEventListener('click', function() {
         if(newGuest.innerHTML.includes("Not Attending")) {
             
-            newGuest.innerText = `${name} ,Attending ,  `;
+            newGuest.innerText = `${name} ,  Attending   `;
             newGuest.appendChild(toggleAttendance);
             newGuest.appendChild(editButton);
             newGuest.appendChild(deleteButton);
             newGuest.appendChild(time);
         }else  {
             
-            newGuest.innerText = `${name} ,Not Attending ,  `;
+            newGuest.innerText = `${name} ,  Not Attending   `;
             newGuest.appendChild(toggleAttendance);
             newGuest.appendChild(editButton);
             newGuest.appendChild(deleteButton);
@@ -41,7 +41,7 @@ document.getElementById("eventRegistration").addEventListener("submit", function
    
     
     //append names, time, and buttons to list items if list is not full
-    newGuest.innerText = `${name} ,${rsvp} ,  `;
+    newGuest.innerText = `${name} ,  ${rsvp}   `;
     newGuest.appendChild(toggleAttendance);
     newGuest.appendChild(editButton);
     newGuest.appendChild(deleteButton);
@@ -86,13 +86,13 @@ document.getElementById("eventRegistration").addEventListener("submit", function
         function saveName() {
             const newName = input.value.trim();
             if (newName !== '') {
-            nameItem.textContent = `${newName} ,${rsvp} ,  `;
+            nameItem.textContent = `${newName} ,  ${rsvp}   `;
             newGuest.appendChild(toggleAttendance);
             newGuest.appendChild(editButton);
             newGuest.appendChild(deleteButton);
             newGuest.appendChild(time);
             } else {
-            nameItem.textContent = `${name} ,${rsvp} ,  `; // Revert if empty
+            nameItem.textContent = `${name} ,  ${rsvp}   `; // Revert if empty
             newGuest.appendChild(toggleAttendance);
             newGuest.appendChild(editButton);
             newGuest.appendChild(deleteButton);
