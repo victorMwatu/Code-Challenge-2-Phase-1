@@ -10,18 +10,42 @@ document.getElementById("eventRegistration").addEventListener("submit", function
     const guestCount = guestList.querySelectorAll('li').length;
     const newGuest = document.createElement('li');
     const deleteButton = document.createElement('button');
-    const editButton = document.createElement('Button');
+    const editButton = document.createElement('button');
+    const toggleAttendance = document.createElement('button');
+    const time = document.createElement('p');
 
     //name list buttons for deleting and editing and add class names for group event handling
     deleteButton.innerText = 'Delete';
+    time.innerHTML = `added on ${(new Date).toLocaleString()}`
     deleteButton.classList.add('deleteButton');
     editButton.innerText = 'Edit Name';
     editButton.classList.add('editButton');
+    toggleAttendance.innerText = "Click To Toggle Attendance";
+    toggleAttendance.addEventListener('click', function() {
+        if(newGuest.innerHTML.includes("Not Attending")) {
+            
+            newGuest.innerText = `${name} ,Attending ,  `;
+            newGuest.appendChild(toggleAttendance);
+            newGuest.appendChild(editButton);
+            newGuest.appendChild(deleteButton);
+            newGuest.appendChild(time);
+        }else  {
+            
+            newGuest.innerText = `${name} ,Not Attending ,  `;
+            newGuest.appendChild(toggleAttendance);
+            newGuest.appendChild(editButton);
+            newGuest.appendChild(deleteButton);
+            newGuest.appendChild(time);
+        }
+    })
+   
     
     //append names, time, and buttons to list items if list is not full
-    newGuest.innerText = `${name} ,${rsvp} , added on ${(new Date).toLocaleString()}  `;
+    newGuest.innerText = `${name} ,${rsvp} ,  `;
+    newGuest.appendChild(toggleAttendance);
     newGuest.appendChild(editButton);
     newGuest.appendChild(deleteButton);
+    newGuest.appendChild(time);
     if (guestCount < 10) {
         guestList.appendChild(newGuest);
     }else {
@@ -62,13 +86,17 @@ document.getElementById("eventRegistration").addEventListener("submit", function
         function saveName() {
             const newName = input.value.trim();
             if (newName !== '') {
-            nameItem.textContent = `${newName} ,${rsvp} , edited on ${(new Date).toLocaleString()}  `;
-            nameItem.appendChild(editButton);
-            nameItem.appendChild(deleteButton);
+            nameItem.textContent = `${newName} ,${rsvp} ,  `;
+            newGuest.appendChild(toggleAttendance);
+            newGuest.appendChild(editButton);
+            newGuest.appendChild(deleteButton);
+            newGuest.appendChild(time);
             } else {
-            nameItem.textContent = `${name} ,${rsvp} , added on ${(new Date).toLocaleString()}  `; // Revert if empty
-            nameItem.appendChild(editButton);
-            nameItem.appendChild(deleteButton);
+            nameItem.textContent = `${name} ,${rsvp} ,  `; // Revert if empty
+            newGuest.appendChild(toggleAttendance);
+            newGuest.appendChild(editButton);
+            newGuest.appendChild(deleteButton);
+            newGuest.appendChild(time);
             }
 
         //     if (category.value === 'friend'){
