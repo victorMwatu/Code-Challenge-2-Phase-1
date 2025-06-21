@@ -23,11 +23,10 @@ header {
 #title p {
     margin: 0;
     font-size: 1.7em;
-    font-weight: 600; 
+    font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
-
 
 .container {
     display: flex;
@@ -37,9 +36,8 @@ header {
     align-items: flex-start;
 }
 
-
 #registration {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
@@ -87,7 +85,7 @@ header {
 
 #eventRegistration button[type="submit"] {
     background-color: #e0e0e0;
-    color: #333; 
+    color: #333;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -99,7 +97,7 @@ header {
 }
 
 #eventRegistration button[type="submit"]:hover {
-    background-color: #d0d0d0; 
+    background-color: #d0d0d0;
     transform: translateY(-1px);
 }
 
@@ -120,7 +118,7 @@ header {
     color: #2c3e50;
     margin-bottom: 12px;
     text-align: center;
-    font-weight: 700; 
+    font-weight: 700;
 }
 
 .listContainer p {
@@ -148,7 +146,6 @@ header {
     display: inline-block;
 }
 
-
 .fre {
     background-color: #6fe2b2;
     color: #28a745;
@@ -160,17 +157,15 @@ header {
 }
 
 .coll {
-    background-color: #8880ff;
-    color: #2007ff;
+    background-color: #ffe680;
+    color: #ffc107;
 }
-
 
 #list {
     list-style-type: decimal;
     padding-left: 25px;
     margin-top: 15px;
 }
-
 
 #list li {
     background-color: #ffffff;
@@ -192,7 +187,6 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-
 #list li.fre {
     border-left: 5px solid #6fe2b2;
     background-color: #f0fdf7;
@@ -204,33 +198,47 @@ header {
 }
 
 #list li.coll {
-    border-left: 5px solid #8880ff;
+    border-left: 5px solid #ffe680;
     background-color: #fffef2;
 }
 
+#list li .button-group {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
 
 #list li button {
-    background-color: #e0e0e0; 
-    color: #333; 
+    background-color: transparent;
     border: none;
-    padding: 6px 10px; 
-    border-radius: 4px;
-    font-size: 0.85em; 
+    color: #007bff;
+    padding: 6px 10px;
+    border-radius: 0;
+    font-size: 0.88em;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: color 0.2s ease;
     flex-shrink: 0;
-    margin-left: 8px;
+    position: relative;
+}
+
+#list li button:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background-color: #ccc;
 }
 
 #list li button:hover {
-    background-color: #d0d0d0; 
-    transform: translateY(-1px);
+    color: #0056b3;
+    transform: none;
 }
 
 #list li button:active {
-    transform: translateY(0);
+    transform: none;
 }
-
 
 @media (max-width: 768px) {
     .container {
@@ -280,10 +288,19 @@ header {
         flex-direction: column;
         align-items: flex-start;
     }
-    #list li button {
+    #list li .button-group {
         margin-top: 6px;
         margin-left: 0;
         width: 100%;
+        justify-content: flex-start;
+    }
+    #list li button {
+        padding: 5px 8px;
+        font-size: 0.8em;
+    }
+    #list li button:not(:first-child)::before {
+        height: 80%;
+        top: 10%;
     }
 }
 
@@ -299,7 +316,7 @@ header {
         font-size: 0.85em;
     }
     #list li button {
-        padding: 5px 8px; 
-        font-size: 0.8em; 
+        padding: 4px 6px;
+        font-size: 0.75em;
     }
 }
